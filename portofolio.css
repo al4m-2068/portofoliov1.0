@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Climate+Crisis:YEAR@1979..2050&family=Mochiy+Pop+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #000635;
+}
+p,a {
+    font-size: 20px;
+    font-family: "Plus Jakarta Sans";
+}
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    padding: 20px 80px;
+    z-index: 999;
+}
+/* NAVBAR */
+.logo {
+    float: left;
+}
+.logo img {
+    height: 100px;
+}
+.navmenu {
+    float: right;
+}
+.navmenu nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.navmenu nav li:first-child {
+    margin-left: 0px;
+}
+.navmenu nav li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+/* INTRODUCTION */
+.hello {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 80px;
+}
+.hello .imgs .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    filter: opacity(0%);
+    transition: all 200ms;
+    border-radius: 18px;
+}
+.hello .imgs .img:hover {
+    transition: all 300ms;
+    filter: opacity(100%);
+}
+.hello .imgs .img.ichi {
+    top: 280px;
+    right: 200px;
+    z-index: 3;
+}
+
+.hello .imgs .img.ni {
+    top: 210px;
+    left: 100px;
+    z-index: 2;
+}
+.hello .imgs .img.san {
+    bottom: 110px;
+    right: 500px;
+    z-index: 1;
+}
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: 300px;
+    text-align: center;
+}
+.cta-container h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Mochiy Pop One";
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.cta-container h1 .boku {
+    width: 100px;
+    font-size: 40px;
+    color: #f3ae41;
+}
+.cta-container h1 .iam {
+    width: 100px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 15px;
+    color: white;
+    letter-spacing: 10px;
+}
+.cta-container h1 .albar {
+    font-size: 120px;
+    color: #f3ae41;
+    font-family: "Climate Crisis";
+    font-variation-settings: "YEAR" 1985;
+}
+.cta-container h2 {
+    display: inline-block;
+    width: 300px;
+    color: white;
+    font: 20px normal;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.heroimg {
+    background-image: url(Images/me-stairs.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: 0px -1500px;
+}
+.herooverlay {
+    position: relative;
+    background-color: rgba(47, 79, 79, 0.4);
+    height: inherit;
+}
+
+.cta {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+/* ABMe */
+.aboutme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+.aboutme-cardtainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+.cards {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    width: 300px;
+    background-color: rgb(224, 224, 224);
+    color: black;
+    padding: 10px;
+    box-shadow: rgba(243, 174, 65, 0.15) 0px 48px 100px 0px;
+}
+.cards img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.cards div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-top: 10px;
+    border-top: black 1px solid;
+    text-align: left;
+}
+.cards p {
+    font-size: 10px;
+}
+.cards.stairs {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+    transition-duration: 300ms;
+    rotate: -5deg;
+}
+.cards.stairs:hover {
+    z-index: 2;
+    transform: scale(1.05);
+}
+.cards.backyard {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    z-index: 1;
+    transition-duration: 300ms;
+    rotate: 5deg;
+}
+.cards.backyard:hover {
+    z-index: 2;
+    transform: scale(1.05);
+}
+.aboutme-paragraph {
+    float: right;
+    width: 40%;
+    height: max-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+/* PROJECTS */
+.projects {
+    padding: 100px 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: black;
+}
+.title h1 {
+    color: white;
+    font-size: 60px;
+    font-family: "Climate Crisis";
+    font-variation-settings: "YEAR" 1990;
+}
+.title h1 span {
+    color: #f3ae41;
+}
+.card-proj {
+    width: 500px;
+    height: max-content;
+    background-color: white;
+    padding: 10px;
+    transition-duration: 500ms;
+}
+.card-proj:hover img{
+    filter: sepia(0);
+}
+.card-proj img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    object-position: center;
+    filter: sepia(100%);
+    transition-duration: 300ms;
+}
+.desc-proj {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    border-top: 1px black solid;
+    padding-top: 10px;
+}
+.desc-proj p {
+    font-size: 15px;
+}
+/* per-Projects */
+.javel {
+    transform: rotate(10deg);
+    z-index: 10;
+}
+.javel:hover {
+    transform: rotate(0deg);
+}
+.rotikuy {
+    transform: rotate(-10deg);
+    z-index: 9;
+}
+.rotikuy:hover {
+    transform: rotate(0deg);
+    z-index: 10;
+}
+.flows {
+    margin-top: 200px;
+    transform: rotate(10deg);
+    z-index: 8;
+}
+.flows:hover {
+    transform: rotate(0deg);
+    z-index: 10;
+}
+.adzsys {
+    transform: rotate(-10deg);
+    z-index: 7;
+}
+.adzsys:hover {
+    transform: rotate(0deg);
+    z-index: 10;
+}
+/* FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 80px;
+    height: 100vh;
+    color: white;
+}
+footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    row-gap: 20px;
+}
+footer div p {
+    font-size: 30px;
+    font-family: "Climate Crisis";
+    font-variation-settings: "YEAR" 1985;
+}
+footer div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    list-style: none;
+}
+footer div ul li i {
+    font-size: 20px;
+    margin-right: 5px;
+    color: white;
+}
+footer div ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    transition-duration: 300ms;
+}
+footer div ul li a:hover {
+    text-decoration: underline #f3ae41 solid 2px;
+    font-weight: 700;
+}
