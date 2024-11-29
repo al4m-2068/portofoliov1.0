@@ -137,7 +137,7 @@ header {
 }
 
 .heroimg {
-    background-image: url(Images/me-stairs.jpg);
+    background-image: url(assets/me-stairs.jpg);
     height: 100vh;
     background-size: cover;
     background-position: 0px -1500px;
